@@ -1,8 +1,13 @@
 ﻿@{
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Login/IndexV");
+    }
     ViewBag.Title = "Home Page";
 }
 
 
+<<<<<<< HEAD
 <head>
     <title> Index</title>
     <style>
@@ -20,6 +25,34 @@
             <br />
             <h1>DILILYA</h1>
             <p class="lead">El mejor servicio de mensajeria </p>
+=======
+<div class="row">
+    <div class="col-md-4">
+        <h2>CONOCNOS</h2>
+        <p>
+            deja que DILIYA se preocupe por ti
+            inscribete al programa de diligencias premium
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Loguot</h2>
+        <h3>UserName  : @Session["userName"]</h3>
+        <a href="@Url.Action("LogOut","Login")">SALIR</a>
+    </div>
+
+
+    <div class="col-md-4">
+        <h2>Registrate</h2>
+        <p>Utiliza nuestros servicios</p>
+        <p><a class="btn btn-default" href=/Clientes/Index> Registrate &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Tranaja con nosotros</h2>
+        <p>Necesitas ingresos extra trabaja con nosotros mientras conoces</p>
+        <p><a class="btn btn-default" href=/Tramitadors/Index>Trabaja aqui &raquo;</a></p>
+    </div>
+>>>>>>> 7ae661afa650137d3b5d22b937b7b78fd8898feb
 
         </div>
 

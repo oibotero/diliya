@@ -17,9 +17,10 @@ namespace MVC.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required(ErrorMessage ="Este campo es requerido")]
         public int CedulaC { get; set; }
 
-        [Required]
+        
         [StringLength(20)]
         public string Nombres { get; set; }
 
@@ -31,7 +32,8 @@ namespace MVC.Models
         [StringLength(50)]
         public string Correo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Campo oblogatorio")]
+        [DataType(DataType.Password)]
         [StringLength(13)]
         public string Contraseña { get; set; }
 
@@ -41,7 +43,12 @@ namespace MVC.Models
         [StringLength(100)]
         public string Direccion { get; set; }
 
+        
+        
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tramite> Tramite { get; set; }
+
+        
     }
 }
