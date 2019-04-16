@@ -1,4 +1,8 @@
 ﻿@{
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Login/IndexV");
+    }
     ViewBag.Title = "Home Page";
 }
 
@@ -19,8 +23,15 @@
             deja que DILIYA se preocupe por ti
             inscribete al programa de diligencias premium
         </p>
-        
     </div>
+
+    <div class="col-md-4">
+        <h2>Loguot</h2>
+        <h3>UserName  : @Session["userName"]</h3>
+        <a href="@Url.Action("LogOut","Login")">SALIR</a>
+    </div>
+
+
     <div class="col-md-4">
         <h2>Registrate</h2>
         <p>Utiliza nuestros servicios</p>
