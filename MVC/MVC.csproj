@@ -168,10 +168,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Diseñoppal.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\factura.jpg" />
+    <Content Include="images\mercado.jpg" />
+    <Content Include="images\restau.jpg" />
+    <Content Include="images\tramitador.png" />
     <Content Include="images\usuario.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -188,7 +193,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="images\DILIYA!.png" />
     <Content Include="images\fondo.png" />
-    <Content Include="Views\Imagenes\ha.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
