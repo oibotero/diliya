@@ -253,6 +253,10 @@
     <Content Include="Views\Login\Edit.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\IndexV.cshtml" />
+    <Content Include="Views\Login\IndexLogT.cshtml" />
+    <Content Include="Views\Login\IndexLogA.cshtml" />
+    <Content Include="Views\Home\IndexT.cshtml" />
+    <Content Include="Views\Home\IndexA.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
