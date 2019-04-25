@@ -1,4 +1,6 @@
-﻿body {
+﻿
+
+body {
    background-image: url(../../images/fondo.png);
    background-size:cover;
    min-width:100%;
@@ -81,4 +83,7 @@ header {
     100% {
         margin-left: -300%;
     }
+
+
 }
+

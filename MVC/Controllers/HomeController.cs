@@ -12,16 +12,6 @@ namespace MVC.Controllers
         {
             return View();
         }
-        public ActionResult IndexT()
-        {
-            return View();
-        }
-
-        public ActionResult IndexA()
-        {
-            return View();
-        }
-
 
         public ActionResult About()
         {

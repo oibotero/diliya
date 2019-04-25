@@ -19,14 +19,6 @@ namespace MVC.Controllers
         {
             return View();
         }
-        public ActionResult IndexLogT()
-        {
-            return View();
-        }
-        public ActionResult IndexLogA()
-        {
-            return View();
-        }
 
         // GET: Login/Details/5
         public ActionResult Details(int? id)
@@ -42,34 +34,6 @@ namespace MVC.Controllers
             }
             return View(cliente);
         }
-        public ActionResult DetailsA(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Administrador administrador = db.Administrador.Find(id);
-            if (administrador == null)
-            {
-                return HttpNotFound();
-            }
-            return View(administrador);
-        }
-        public ActionResult DetailsT(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-          Tramitador tramitador = db.Tramitador.Find(id);
-            if (tramitador == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tramitador);
-        }
-
-
 
         // GET: Login/Create
         public ActionResult Create()
@@ -97,46 +61,6 @@ namespace MVC.Controllers
                 }
             }
                 return View();
-        }
-        public ActionResult AuthorizedA(MVC.Models.Administrador usermodel1)
-        {
-            using (ConexionBD db = new ConexionBD())
-            {
-                var userDetails = db.Administrador.Where(x => x.CedulaA == usermodel1.CedulaA && x.Contraseña == usermodel1.Contraseña).FirstOrDefault();
-                if (userDetails == null)
-                {
-
-
-                    return View("IndexLogA");
-                }
-                else
-                {
-                    Session["UserID"] = userDetails.CedulaA;
-                    Session["UserName"] = userDetails.Nombres;
-                    return RedirectToAction("IndexA", "Home");
-                }
-            }
-            return View();
-        }
-        public ActionResult AuthorizedT(MVC.Models.Tramitador usermodel1)
-        {
-            using (ConexionBD db = new ConexionBD())
-            {
-                var userDetails = db.Tramitador.Where(x => x.CedulaT == usermodel1.CedulaT && x.ContraseñaT == usermodel1.ContraseñaT).FirstOrDefault();
-                if (userDetails == null)
-                {
-
-
-                    return View("IndexLogT");
-                }
-                else
-                {
-                    Session["UserID"] = userDetails.CedulaT;
-                    Session["UserName"] = userDetails.Nombres;
-                    return RedirectToAction("IndexT", "Home");
-                }
-            }
-            return View();
         }
 
         public ActionResult LogOut()
