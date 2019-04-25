@@ -140,7 +140,6 @@
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\TramitadorsController.cs" />
     <Compile Include="Controllers\TramitesController.cs" />
     <Compile Include="Controllers\Tramite_condineroController.cs" />
@@ -154,7 +153,6 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ConexionBD.cs" />
     <Compile Include="Models\MVCContext.cs" />
-    <Compile Include="Models\Pagos.cs" />
     <Compile Include="Models\Tramitador.cs" />
     <Compile Include="Models\Tramite.cs" />
     <Compile Include="Models\Tramite_condinero.cs" />
@@ -255,12 +253,10 @@
     <Content Include="Views\Login\Edit.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\IndexV.cshtml" />
-    <Content Include="Views\Tramite_condinero\Pagos.cshtml" />
-    <Content Include="Views\Pagos\Create.cshtml" />
-    <Content Include="Views\Pagos\Delete.cshtml" />
-    <Content Include="Views\Pagos\Details.cshtml" />
-    <Content Include="Views\Pagos\Edit.cshtml" />
-    <Content Include="Views\Pagos\Index.cshtml" />
+    <Content Include="Views\Login\IndexLogT.cshtml" />
+    <Content Include="Views\Login\IndexLogA.cshtml" />
+    <Content Include="Views\Home\IndexT.cshtml" />
+    <Content Include="Views\Home\IndexA.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

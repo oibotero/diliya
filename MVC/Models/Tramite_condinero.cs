@@ -29,7 +29,7 @@ namespace MVC.Models
 
         public double? Tiempo_tramite { get; set; }
 
-        [StringLength(150)]
+        [StringLength(200)]
         public string Descripcion { get; set; }
 
         [StringLength(50)]
