@@ -2,6 +2,19 @@
 
 @{
     ViewBag.Title = "Create";
+    if (Session["userCliente"] == null)
+    {
+        Response.Redirect("~/Login/IndexV");
+    }
+    if (Session["userAdministrador"] != null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+    if (Session["userTramitador"] != null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+    ViewBag.Title = "Home Page";
 }
 
 <h2>Create</h2>

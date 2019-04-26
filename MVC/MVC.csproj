@@ -257,6 +257,9 @@
     <Content Include="Views\Login\IndexLogA.cshtml" />
     <Content Include="Views\Home\IndexT.cshtml" />
     <Content Include="Views\Home\IndexA.cshtml" />
+    <Content Include="Views\Calificar_tramitador\View.cshtml" />
+    <Content Include="Views\Calificar_tramitador\Consultar.cshtml" />
+    <Content Include="Views\Calificar_cliente\Index - Copia.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

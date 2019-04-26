@@ -91,7 +91,7 @@ namespace MVC.Controllers
                 }
                 else
                 {
-                    Session["UserID"] = userDetails.CedulaC;
+                    Session["UserCliente"] = userDetails.CedulaC;
                     Session["UserName"] = userDetails.Nombres;
                     return RedirectToAction("Index", "Home");
                 }
@@ -111,7 +111,7 @@ namespace MVC.Controllers
                 }
                 else
                 {
-                    Session["UserID"] = userDetails.CedulaA;
+                    Session["UserAdministrador"] = userDetails.CedulaA;
                     Session["UserName"] = userDetails.Nombres;
                     return RedirectToAction("IndexA", "Home");
                 }
@@ -131,8 +131,9 @@ namespace MVC.Controllers
                 }
                 else
                 {
-                    Session["UserID"] = userDetails.CedulaT;
+                    Session["UserTramitador"] = userDetails.CedulaT;
                     Session["UserName"] = userDetails.Nombres;
+                    
                     return RedirectToAction("IndexT", "Home");
                 }
             }
@@ -141,7 +142,24 @@ namespace MVC.Controllers
 
         public ActionResult LogOut()
         {
-            int userid = (int)Session["userID"];
+            if (Session["userCliente"]!=null)
+            {
+                int userid = (int)Session["userCliente"];
+                Session.Abandon();
+                return RedirectToAction("IndexV", "Login");
+            }
+            if (Session["userCliente"] != null)
+            {
+                int userid = (int)Session["userCliente"];
+                Session.Abandon();
+                return RedirectToAction("IndexV", "Login");
+            }
+            if (Session["userCliente"] != null)
+            {
+                int userid = (int)Session["userCliente"];
+                Session.Abandon();
+                return RedirectToAction("IndexV", "Login");
+            }
             Session.Abandon();
             return RedirectToAction("IndexV", "Login");
         }

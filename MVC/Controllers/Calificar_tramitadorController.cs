@@ -35,6 +35,9 @@ namespace MVC.Controllers
             return View(calificar_tramitador);
         }
 
+       
+
+
         // GET: Calificar_tramitador/Create
         public ActionResult Create()
         {

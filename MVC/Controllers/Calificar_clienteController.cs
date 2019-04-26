@@ -17,7 +17,39 @@ namespace MVC.Controllers
         // GET: Calificar_cliente
         public ActionResult Index()
         {
-            return View(db.Calificar_cliente.ToList());
+            try
+            {
+                var consulta = from c in db.Calificar_cliente
+                               where c.Id.ToString().Equals(Session["userTramitador"])
+                               select c;
+                return View(consulta);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
+            
+        }
+        public Calificar_cliente consultar(int id)
+        {
+            try
+            {
+                var consulta = from c in db.Calificar_cliente
+                               where c.Id == id
+                               select c;
+                return consulta.FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return null;
+            }
+
+        }
+        public ActionResult mostrarDatos(int d)
+        {
+            return View(consultar(d));
         }
 
         // GET: Calificar_cliente/Details/5
@@ -28,6 +60,11 @@ namespace MVC.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Calificar_cliente calificar_cliente = db.Calificar_cliente.Find(id);
+            if (calificar_cliente.Id.Equals(id))
+            {
+                
+                return View(calificar_cliente);
+            }
             if (calificar_cliente == null)
             {
                 return HttpNotFound();
