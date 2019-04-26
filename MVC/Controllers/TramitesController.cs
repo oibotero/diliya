@@ -12,15 +12,32 @@ namespace MVC.Controllers
 {
     public class TramitesController : Controller
     {
+
         private ConexionBD db = new ConexionBD();
 
         // GET: Tramites
         public ActionResult Index()
         {
+
+            
+            var tramite = db.Tramite.Include(t => t.Cliente).Include(t => t.Tramitador) ;
+            
+            tramite.ToList();
+          
+            return View(tramite);
+        }
+        public ActionResult ReporteTramites()
+        {
             var tramite = db.Tramite.Include(t => t.Cliente).Include(t => t.Tramitador);
             return View(tramite.ToList());
         }
-
+        public ActionResult TramitesTramitador()
+    {
+            
+           var tramite = db.Tramite.Where(t => t.idtramitador.ToString().Equals(Session["UserID"]));
+           
+            return View(tramite.ToList());
+        }
         // GET: Tramites/Details/5
         public ActionResult Details(int? id)
         {

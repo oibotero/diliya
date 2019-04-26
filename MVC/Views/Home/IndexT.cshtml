@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<MVC.Models.Tramite>
+
+@{
+    ViewBag.Title = "cambiar estado tramite";
+}
+
+<head>
+    <title> Index</title>
+    <link rel="stylesheet" href="~/Content/Diseñoppal.css" />
+</head>
+
+<header></header>
+
+
+
+<div class="slider">
+    <ul>
+        <li>
+            <img src="~/images/factura.jpg" alt="" height="200" width="100">
+        </li>
+        <li>
+            <img src="~/images/restau.jpg" alt="" height="200" width="100">
+        </li>
+        <li>
+            <img src="~/images/mercado.jpg" alt="" height="200" width="100">
+        </li>
+
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>CONOCENOS</h2>
+        <p>
+            deja que DILIYA se preocupe por ti
+            inscribete al programa de diligencias premium
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Loguot</h2>
+        <h3>UserName  : @Session["userName"]</h3>
+        <h4>Cedula  : @Session["UserID"]</h4>
+        <a href="@Url.Action("LogOut","Login")">SALIR</a>
+    </div>
+</div>
+</div>
+<a class="btn btn-default btn-danger" href=/Tramites/TramiteTramitador> Tramites &raquo;</a>
+
+@Html.ActionLink("Cambiar Estado tramite", "TramitesTramitador")
+
+
+</div>
+
+
+
+

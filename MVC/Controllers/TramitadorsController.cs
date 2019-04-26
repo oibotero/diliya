@@ -19,6 +19,10 @@ namespace MVC.Controllers
         {
             return View(db.Tramitador.ToList());
         }
+        public ActionResult Reporte()
+        {
+            return View(db.Tramitador.ToList());
+        }
 
         // GET: Tramitadors/Details/5
         public ActionResult Details(int? id)
@@ -41,6 +45,11 @@ namespace MVC.Controllers
             return View();
         }
 
+        public ActionResult ModificarT() {
+            return View();
+
+        }
+        
         // POST: Tramitadors/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.

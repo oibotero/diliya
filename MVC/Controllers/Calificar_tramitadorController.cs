@@ -90,19 +90,26 @@ namespace MVC.Controllers
         }
 
         // GET: Calificar_tramitador/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? id,int? calificacion)
         {
-            if (id == null)
+            Tramite tr = db.Tramite.Find(id);
+            
+            if (calificacion <= 1)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Calificar_tramitador calificar_tramitador = db.Calificar_tramitador.Find(id);
+                if (calificar_tramitador == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(calificar_tramitador);
             }
-            Calificar_tramitador calificar_tramitador = db.Calificar_tramitador.Find(id);
-            if (calificar_tramitador == null)
-            {
-                return HttpNotFound();
-            }
-            return View(calificar_tramitador);
+            return View();
         }
+
 
         // POST: Calificar_tramitador/Delete/5
         [HttpPost, ActionName("Delete")]
