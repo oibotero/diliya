@@ -1,6 +1,7 @@
 ﻿@model MVC.Models.Tramitador
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Create";
 }
 
@@ -16,6 +17,41 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+=======
+    /**/
+
+    ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <head>
+        <title> Index</title>
+        <style>
+            .form-horizontal {
+                background-image: url(../../images/fondo.png);
+            }
+            #ensayo{
+                position:absolute;
+                top:40%;
+            }
+        </style>
+    </head>
+
+    <img src="~/images/DILIYA!.png" width="82" height="82" />
+    <div class="form-horizontal" align="center">
+
+        <h4>Tramitador</h4>
+        <img src="~/images/usuario.png" width="82" height="82" />
+
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group" align="left">
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             @Html.LabelFor(model => model.CedulaT, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CedulaT, new { htmlAttributes = new { @class = "form-control" } })
@@ -23,9 +59,15 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="form-group">
             @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+=======
+        <div id="ensayo" class="form-group" align="center">
+            @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" align="center">
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
                 @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
             </div>
@@ -41,7 +83,11 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Privilegios, htmlAttributes: new { @class = "control-label col-md-2" })
+<<<<<<< HEAD
             <div class="col-md-10">
+=======
+            <div class="col-md-10" align="center">
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
                 @Html.EditorFor(model => model.Privilegios, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Privilegios, "", new { @class = "text-danger" })
             </div>
@@ -119,12 +165,25 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
+=======
+        
+            <input type="file" />
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Resgistrarse" class="btn btn-default" />
+                </div>
+            </div>
+</div>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
 }
 
 <div>

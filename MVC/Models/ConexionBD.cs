@@ -243,5 +243,10 @@
                 .Property(e => e.Costo_total)
                 .IsFixedLength();
         }
+<<<<<<< HEAD
+=======
+
+        public System.Data.Entity.DbSet<MVC.Models.Pagos> Pagos { get; set; }
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
     }
 }

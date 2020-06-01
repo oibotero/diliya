@@ -46,6 +46,12 @@ namespace MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
+=======
+
+   
+
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
         public ActionResult Create([Bind(Include = "CedulaT,Nombres,Apellidos,Privilegios,Telefono,Email,Direccion,ContraseñaT,Fecha_nacimiento,Pasado_judicial,Descripcion,Experiencia,Tipo_vehiculo")] Tramitador tramitador)
         {
             if (ModelState.IsValid)

@@ -4,19 +4,33 @@
     ViewBag.Title = "Create";
 }
 
+<<<<<<< HEAD
 <h2>Create</h2>
 
 
+=======
+<h2>Crear Usuario</h2>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
+<<<<<<< HEAD
     <div class="form-horizontal">
         <h4>Cliente</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.CedulaC, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+    <div class="form-horizontal" style="margin-left:20%" >
+        <h4>Cliente</h4>
+        <hr />
+        <div id="usuariologo"></div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <span class="control-label col-md-2">Cedula del Usuario</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CedulaC, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CedulaC, "", new { @class = "text-danger" })
@@ -24,7 +38,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <span class="control-label col-md-2">Nombres</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
@@ -32,7 +50,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.Apellidos, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <span class="control-label col-md-2">Apellidos</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Apellidos, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
@@ -40,7 +62,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <span class="control-label col-md-2">Email</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
@@ -48,7 +74,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <span class="control-label col-md-2">Contraseña</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
@@ -56,7 +86,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <span class="control-label col-md-2">Telefono</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
@@ -64,7 +98,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <span class="control-label col-md-2">Direccion</span>
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
@@ -73,7 +111,11 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+<<<<<<< HEAD
                 <input type="submit" value="Create" class="btn btn-default" />
+=======
+                <input type="submit" value="Registrar Usuario" class="btn btn-primary" />
+>>>>>>> 8eb55b2475a46c8a1cf47426a1b5f19e0e29907a
             </div>
         </div>
     </div>
